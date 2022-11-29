@@ -1,0 +1,13 @@
+{
+  "name": "@gnd/codec-exec",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "author": "g. nicholas d'andrea <nick@gnidan.org>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
