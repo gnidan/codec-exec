@@ -5,9 +5,46 @@
   "author": "g. nicholas d'andrea <nick@gnidan.org>",
   "license": "MIT",
   "scripts": {
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "test": "jest"
   },
   "devDependencies": {
+    "@jest/globals": "^29.3.1",
+    "@truffle/compile-common": "^0.9.1",
+    "@truffle/compile-solidity": "^6.0.51",
+    "ganache": "^7.5.0",
+    "ts-jest": "^29.0.3",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@ethersproject/abstract-provider": "^5.7.0",
+    "@ganache/ethereum-transaction": "^0.6.0",
+    "@truffle/abi-utils": "^0.3.5",
+    "@truffle/codec": "^0.14.10",
+    "@truffle/decoder": "^5.3.1",
+    "@truffle/encoder": "^0.2.14",
+    "eip1193-provider": "^1.0.1",
+    "jest": "^29.3.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "tsconfig": "<rootDir>/tsconfig.json",
+          "diagnostics": true
+        }
+      ]
+    },
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ]
   }
 }
